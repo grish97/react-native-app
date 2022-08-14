@@ -9,17 +9,14 @@ interface IPropType {
 
 export function Product({ product, onPress }: IPropType) {
     return (
-        <TouchableOpacity style={styles.card} onPress={onPress}>
-            <Image
-                style={styles.thumb}
-                source={product.image}
-            />
+      <TouchableOpacity style={styles.card} onPress={onPress}>
+        <Image style={styles.thumb} source={product.image} />
 
-            <View style={styles.infoContainer}>
-                <Text style={styles.name}>{product.name}</Text>
-                <Text style={styles.price}>$ {product.price}</Text>
-            </View>
-        </TouchableOpacity>    
+        <View style={styles.infoContainer}>
+          <Text style={styles.name}>{product.name}</Text>
+          <Text style={styles.price}>$ {product.price}</Text>
+        </View>
+      </TouchableOpacity>
     );
 }
 
